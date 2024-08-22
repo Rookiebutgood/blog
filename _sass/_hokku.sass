@@ -2,19 +2,10 @@
   opacity: 0
   display: none
 
-.hokku.hokku_horizontal
-  position: relative
-  display: flex
-  justify-content: center
-  position: relative
-  margin: 0 20px
-  overflow: hidden
+.hokku
   .hokku__kanji
-    position: absolute
     background: #323031
     padding: 20px 0
-    top: 20px
-    left: 80px
     display: flex
     flex-direction: column
     justify-content: center
@@ -24,20 +15,33 @@
   .hokku__kanji-symbol
     color: #fff8f0
     font-size: 72px
+  .hokku__column
+    background: #323031
+    padding: 8px 24px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    animation: fade-right 1.5s ease
+
+.hokku.hokku_horizontal
+  position: relative
+  display: flex
+  justify-content: center
+  position: relative
+  margin: 0 20px
+  overflow: hidden
+  .hokku__kanji
+    position: absolute
+    top: 20px
+    left: 80px
   .hokku__image
     width: 70%
     height: auto
     animation: fade-out 1.5s ease
   .hokku__column
     position: absolute
-    background: #323031
-    padding: 20px
     bottom: 20px
     right: 0
-    display: flex
-    flex-direction: column
-    justify-content: center
-    animation: fade-right 1.5s ease
     p
       font-size: 36px
       color: #fff8f0
