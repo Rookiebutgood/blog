@@ -3,13 +3,7 @@ layout: base
 ---
 
 {% if page.tag == 'hokku' %}
-  <script>
-    const wrapper = document.querySelector('.hokku')
-    const image = document.querySelector('.hokku__image')
-    image.onload = () => {
-      wrapper.className = image.width > image.height ? 'hokku hokku_horizontal' : 'hokku hokku_vertical'
-    }
-  </script>
+ 
   <div class="hokku hokku_hide">
     <img class="hokku__image" src="{{ site.baseurl }}{{page.image}}" />
     <div class="hokku__kanji">
@@ -23,6 +17,13 @@ layout: base
       </div>
     </div>
   </div>
+ <script>
+    const wrapper = document.querySelector('.hokku')
+    const image = document.querySelector('.hokku__image')
+    image.onload = () => {
+      wrapper.className = image.width > image.height ? 'hokku hokku_horizontal' : 'hokku hokku_vertical'
+    }
+  </script>
 {% else %}
   <div class="post">
     {{ content }}
