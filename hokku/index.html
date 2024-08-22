@@ -7,9 +7,7 @@ title: Hokku
     {% for post in paginator.posts %}
       {% if post.tag == 'hokku' %}
         <li class="blog-list__item">
-          <div class="blog-list__title-wrapper">
-            <a class="blog-list__link" href="{{ site.baseurl }}{{ post.url}}"> {{ post.title }}</a>
-          </div>
+          <a class="blog-list__link" href="{{ site.baseurl }}{{ post.url}}"> {{ post.title }}</a>
           <div class="blog-list__date">
             {% assign m = post.date | date: "%-m" %}
             {{ post.date | date: "%-d" }}
