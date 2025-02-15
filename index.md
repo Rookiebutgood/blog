@@ -5,4 +5,4 @@
 layout: default
 ---
 
-Work in progress
+main page
